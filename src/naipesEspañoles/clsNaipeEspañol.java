@@ -47,31 +47,41 @@ public class clsNaipeEspañol {
 	/**
 	 * Asigna el nombre de la carta correspondiente a su valor
 	 */
-	
+
 	private void asignaNombre() {
 
 		switch (this.getNumero()) {
 
 		case 1:
-			this.setNombre("As de " + this.getPalo()); break;
+			this.setNombre("As de " + this.getPalo());
+			break;
 		case 2:
-			this.setNombre("Dos de " + this.getPalo()); break;
+			this.setNombre("Dos de " + this.getPalo());
+			break;
 		case 3:
-			this.setNombre("Tres de " + this.getPalo()); break;
+			this.setNombre("Tres de " + this.getPalo());
+			break;
 		case 4:
-			this.setNombre("Cuatro de " + this.getPalo()); break;
+			this.setNombre("Cuatro de " + this.getPalo());
+			break;
 		case 5:
-			this.setNombre("Cinco de " + this.getPalo()); break;
+			this.setNombre("Cinco de " + this.getPalo());
+			break;
 		case 6:
-			this.setNombre("Seis de " + this.getPalo()); break;
+			this.setNombre("Seis de " + this.getPalo());
+			break;
 		case 7:
-			this.setNombre("Siete de " + this.getPalo()); break;
+			this.setNombre("Siete de " + this.getPalo());
+			break;
 		case 10:
-			this.setNombre("Diez de " + this.getPalo()); break;
+			this.setNombre("Diez de " + this.getPalo());
+			break;
 		case 11:
-			this.setNombre("Once de " + this.getPalo()); break;
+			this.setNombre("Once de " + this.getPalo());
+			break;
 		case 12:
-			this.setNombre("Doce de " + this.getPalo()); break;
+			this.setNombre("Doce de " + this.getPalo());
+			break;
 		}
 	}
 
@@ -97,28 +107,29 @@ public class clsNaipeEspañol {
 	 */
 
 	public boolean igualPalo(clsNaipeEspañol B) {
-		if (this.getPalo().compareTo( B.getPalo()) == 0)
+		if (this.getPalo().compareTo(B.getPalo()) == 0)
 			return true;
 		else
 			return false;
 	}
 
 	public boolean igualValor(clsNaipeEspañol B) {
-		if (this.getNumero() ==  B.getNumero())
+		if (this.getNumero() == B.getNumero())
 			return true;
 		else
 			return false;
 	}
 
-	public	clsNaipeEspañol devuelveMayor(clsNaipeEspañol B) {
+	public clsNaipeEspañol devuelveMayor(clsNaipeEspañol B) {
 
-		if (this.getNumero() >  B.getNumero())
+		if (this.getNumero() > B.getNumero())
 			return this;
 		else
 			return B;
 
 	}
-	public String toString(){
+
+	public String toString() {
 		return this.getNombre();
 	}
 
