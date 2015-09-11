@@ -106,6 +106,14 @@ public class clsNaipeEspañol {
 	 * Metodos
 	 */
 
+	/**
+	 * 
+	 * 
+	 * @param clNaipeEspañol
+	 *            B
+	 * @return true si son del mismo palo false si es todo lo contrario
+	 * 
+	 */
 	public boolean igualPalo(clsNaipeEspañol B) {
 		if (this.getPalo().compareTo(B.getPalo()) == 0)
 			return true;
@@ -113,6 +121,12 @@ public class clsNaipeEspañol {
 			return false;
 	}
 
+	/**
+	 * @param clsNaipeEspañol
+	 *            B
+	 * @return true si tienen el mismo valor false si sucede todo lo contrario
+	 * 
+	 */
 	public boolean igualValor(clsNaipeEspañol B) {
 		if (this.getNumero() == B.getNumero())
 			return true;
@@ -120,6 +134,13 @@ public class clsNaipeEspañol {
 			return false;
 	}
 
+	/**
+	 * @param clsNaipeEspañol
+	 *            B
+	 * 
+	 * @return el objeto que sea mayor
+	 * 
+	 */
 	public clsNaipeEspañol devuelveMayor(clsNaipeEspañol B) {
 
 		if (this.getNumero() > B.getNumero())
@@ -129,6 +150,11 @@ public class clsNaipeEspañol {
 
 	}
 
+	/**
+	 * @param
+	 * @return String con el nombre de la carta
+	 * 
+	 */
 	public String toString() {
 		return this.getNombre();
 	}
