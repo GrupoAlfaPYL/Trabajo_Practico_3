@@ -36,7 +36,7 @@ public class clsRevisaTruco {
 		String palo="";
 		do{
 			numero = generaRandom(1,12);
-		}while (numero != 8 && numero != 9 );
+		}while (numero == 8 || numero == 9 );
 		aux= generaRandom(1,4);
 		switch (aux){
 		case 1: palo = "ORO"; break;
@@ -53,7 +53,7 @@ public class clsRevisaTruco {
 	 * 
 	 * @return int numeroRandom entre  [VI,VF]
 	 */
-	private int generaRandom(int valorInicial,int valorFinal){
+	public int generaRandom(int valorInicial,int valorFinal){
 		return new Random().nextInt(valorFinal) + valorInicial;
 	}
 	
@@ -72,7 +72,8 @@ public class clsRevisaTruco {
 			if(A.igualPalo(B)) envido = sumaEnvido(A.getNumero(),B.getNumero(),0);
 			else {
 				if(A.igualPalo(C)) envido = sumaEnvido(A.getNumero(),0,C.getNumero());
-				else  envido = (A.devuelveMayor(B.devuelveMayor(C))).getNumero();
+				else if(B.igualPalo(C)) envido = sumaEnvido(0,B.getNumero(),C.getNumero());
+					else envido = (A.devuelveMayor(B.devuelveMayor(C))).getNumero();
 			}
 			
 		}
