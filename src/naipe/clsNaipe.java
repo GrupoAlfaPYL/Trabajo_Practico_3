@@ -1,4 +1,7 @@
 package naipe;
+
+import revisaTruco.clsNaipeEspañol;
+
 /**
  * 
  * @author GildoAlejandro
@@ -20,6 +23,7 @@ public abstract class clsNaipe {
 		setNumero(numero);
 		setPalo(palo);
 		asignaNombre();
+		asignaValor();
 	}
 	
 	/**
@@ -33,9 +37,67 @@ public abstract class clsNaipe {
 		this.palo = palo;
 	}
 
-	private void setNombre(String nombre) {
+	protected void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	protected void setValor(int valor){
+		this.valor = valor;
+	}
 	protected abstract void asignaNombre();
+	protected abstract void asignaValor();
 	
+	/**
+	 * Getters
+	 */
+
+	public int getNumero() {
+		return this.numero;
+	}
+
+	public String getPalo() {
+		// TODO Auto-generated method stub
+		return this.palo;
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+	/**
+	 * Metodos
+	 */
+	/**
+	 * 
+	 * @param B
+	 * @return
+	 */
+	public boolean igualPalo(clsNaipe B) {
+		if (this.getPalo().compareTo(B.getPalo()) == 0)
+			return true;
+		else
+			return false;
+	}
+	/**
+	 * 
+	 * @param B
+	 * @return
+	 */
+	public boolean igualValor(clsNaipeEspañol B) {
+		if (this.getNumero() == B.getNumero())
+			return true;
+		else
+			return false;
+	}
+	/**
+	 * 
+	 * @param B
+	 * @return
+	 */
+	public clsNaipe devuelveMayor(clsNaipe B) {
+
+		if (this.getNumero() > B.getNumero())
+			return this;
+		else
+			return B;
+
+	}	
 }

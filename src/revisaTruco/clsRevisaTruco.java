@@ -13,18 +13,13 @@ import java.util.Random;
 	
 
 public class clsRevisaTruco {
-	/**
-	 * clsNaipeEspañol un naipe de la baraja española
-	 */
-	
-	//private clsNaipeEspañol cartaA;
 	
 	/*
 	 * constructor de clase
 	 * 
 	 */
 	public clsRevisaTruco (){
-		//cartaA = new clsNaipeEspañol();
+		
 	}
 	
 	/**
@@ -77,29 +72,7 @@ public class clsRevisaTruco {
 			}
 			
 		}
-		
-		/*if(A.igualPalo(B)){
-			if(A.igualPalo(C)){
-				envido = sumaEnvido(A.getNumero(), B.getNumero(), C.getNumero());
-			}
-			else{
-				envido = sumaEnvido(A.getNumero(), B.getNumero(),0);
-			}
-		}
-		else{ 
-			if(A.igualPalo(C)){
-				envido = sumaEnvido(A.getNumero(), 0, C.getNumero());	
-			}
-			else{
-				if(B.igualPalo(C)){
-				envido = sumaEnvido(0, B.getNumero(), C.getNumero());	
-				}
-				else{
-				envido = (A.devuelveMayor(B.devuelveMayor(C))).getNumero();
-				}
-			}
-			
-		}*/
+	
 		return envido;
 	}
 	/**
