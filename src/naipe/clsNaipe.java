@@ -1,5 +1,7 @@
 package naipe;
 
+import java.util.Random;
+
 import revisaTruco.clsNaipeEspañol;
 
 /**
@@ -45,6 +47,7 @@ public abstract class clsNaipe {
 	}
 	protected abstract void asignaNombre();
 	protected abstract void asignaValor();
+	protected abstract clsNaipe generaCartaRandom();
 	
 	/**
 	 * Getters
@@ -81,11 +84,8 @@ public abstract class clsNaipe {
 	 * @param B
 	 * @return
 	 */
-	public boolean igualValor(clsNaipeEspañol B) {
-		if (this.getNumero() == B.getNumero())
-			return true;
-		else
-			return false;
+	public boolean igualValor(clsNaipe B) {
+		return this.getNumero() > B.getNumero();
 	}
 	/**
 	 * 
@@ -93,11 +93,22 @@ public abstract class clsNaipe {
 	 * @return
 	 */
 	public clsNaipe devuelveMayor(clsNaipe B) {
-
 		if (this.getNumero() > B.getNumero())
 			return this;
 		else
 			return B;
 
-	}	
+	}
+	public boolean esMayor(clsNaipe B){
+		return  this.getNumero() > B.getNumero();
+	}
+	/**
+	 * 
+	 * @param valorInicial
+	 * @param valorFinal
+	 * @return
+	 */
+	public int generaRandom(int valorInicial,int valorFinal){
+		return new Random().nextInt(valorFinal) + valorInicial;
+	}
 }
